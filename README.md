@@ -1,4 +1,4 @@
-<!-- # Angular CocktailsDB (beta)
+ # Angular CocktailsDB (beta)
 
 ## 🚀 Getting Started
 
@@ -17,12 +17,11 @@ See **Installing** for steps to make it work in your local environment.
 
 ## 🔧 Installing
 
-```bash
 git clone https://github.com/Angular-CocklktailsDB/.git
 cd Angular-CocktailsDB
 npm install
 ng serve and enjoy it
-```.
+
 
 ## 🛠️ Built With
 
