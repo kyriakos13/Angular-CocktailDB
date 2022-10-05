@@ -1,4 +1,4 @@
- # Angular CocktailsDB (beta)
+ # Angular CocktailsDB
 
 ## 🚀 Getting Started
 
@@ -7,7 +7,7 @@ Angular-CocktailsDB is a simple web app that consumes The Cocktails DB API, it c
 See **Installing** for steps to make it work in your local environment.
 ## 💻 Live Demo
 
-✔ Github Pages: https:///Angular-CoclktailsDB/ (new with Angular 13 + improvements + still working on it).
+✔ Github Pages: WIP...
 
 ## 📋 Prerequisites
 
@@ -17,7 +17,7 @@ See **Installing** for steps to make it work in your local environment.
 
 ## 🔧 Installing
 
-git clone https://github.com/Angular-CocklktailsDB/.git
+git clone https://github.com/kyriakos13/Angular-CocktailDB.git
 cd Angular-CocktailsDB
 npm install
 ng serve and enjoy it
@@ -25,15 +25,9 @@ ng serve and enjoy it
 
 ## 🛠️ Built With
 
-* <a href="https://angular.io/" target="_blank">Angular</a> 13.3.9 - The Web Framework used
-* <a href="https://material.angular.io/" target="_blank">Angular Material</a> 13.3.7 - The UI Component Library
+* <a href="https://angular.io/" target="_blank">Angular</a> The Web Framework used
+* <a href="https://material.angular.io/" target="_blank">Angular Material</a> The UI Component Library
 
 ## 📦 Deployment
 
-<<<<<<< HEAD
-You can check <a href="https://angular.io/guide/deployment" target="_blank">Angular Deployment guide</a> to learn how to deploy this project. 
-
-
-=======
 You can check <a href="https://angular.io/guide/deployment" target="_blank">Angular Deployment guide</a> to learn how to deploy this project.
->>>>>>> 8054efdf7435a33a7846c38faba2ba95d1cb3f97
