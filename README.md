@@ -30,6 +30,10 @@ ng serve and enjoy it
 
 ## 📦 Deployment
 
+<<<<<<< HEAD
 You can check <a href="https://angular.io/guide/deployment" target="_blank">Angular Deployment guide</a> to learn how to deploy this project. 
 
 
+=======
+You can check <a href="https://angular.io/guide/deployment" target="_blank">Angular Deployment guide</a> to learn how to deploy this project.
+>>>>>>> 8054efdf7435a33a7846c38faba2ba95d1cb3f97
