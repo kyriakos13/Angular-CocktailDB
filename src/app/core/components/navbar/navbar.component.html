@@ -1,0 +1,26 @@
+<header class="navbar__container" [class.colored__scrolled]="isScrolled">
+
+  <nav class="space-between navbar__nav container">
+    <a routerLink="/" class="flex-start navbar__logo">
+      CocktailDB
+    </a>
+    <div class="navbar__list">
+      <a mat-button routerLink="drinks" [routerLinkActive]="['activated-route']" aria-label="drinks">All drinks</a>
+
+      <button mat-icon-button [matMenuTriggerFor]="menu" matTooltip="Change Color" aria-label="Change Color">
+        <mat-icon>format_color_fill</mat-icon>
+      </button>
+
+      <mat-menu #menu="matMenu">
+        <div *ngFor="let theme of themeColorList" [class.hidden]="themeColorInit === theme.color" [attr.aria-label]="'Color ' + theme.name">
+          <button mat-menu-item (click)="setColorTheme(theme.color)">
+            <mat-icon *ngIf="theme.name === 'Dark'">brightness_3</mat-icon>
+            <mat-icon *ngIf="theme.name === 'Default'">wb_sunny</mat-icon>
+            <span>{{theme.name}}</span>
+          </button>
+        </div>
+      </mat-menu>
+    </div>
+  </nav>
+
+</header>

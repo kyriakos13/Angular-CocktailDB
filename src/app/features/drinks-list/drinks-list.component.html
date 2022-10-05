@@ -1,0 +1,55 @@
+<div class="container drinks-list">
+  <div fxLayout="row">
+    <mat-card
+      fxFlex="25%"
+      fxShow
+      fxHide.sm="true"
+      fxHide.xs="true"
+      class="filter-drinks-card"
+    >
+      <div style="margin-bottom: 24px">Search by</div>
+      <app-search-bar (searchEvent)="drinks = $event"></app-search-bar>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title> Categories </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <div *ngFor="let category of categories">
+          <button
+            mat-raised-button
+            color="primary"
+            aria-label="Set categories filter"
+            (click)="getDrinkByCategory(category.strCategory)"
+          >
+            {{ category.strCategory }}
+          </button>
+        </div>
+      </mat-expansion-panel>
+    </mat-card>
+
+    <div fxFlex="75%" fxFlex.sm="100" fxFlex.xs="100">
+      <div fxLayout="row wrap">
+        <span
+          fxFlex="25%"
+          fxFlex.md="25%"
+          fxFlex.xs="50%"
+          style="padding: 5px 5px"
+          *ngFor="let drink of drinks | slice: 0:showItems"
+        >
+          <app-poster-card [drink]="drink"></app-poster-card>
+        </span>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="center center" style="padding: 14px">
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="loadMore()"
+          disabled="{{ drinks.length <= showItems }}"
+        >
+          Load more
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

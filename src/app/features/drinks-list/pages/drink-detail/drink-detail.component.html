@@ -1,0 +1,60 @@
+<mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
+<div class="container" style="margin-top: 6rem;">
+  <div class="drink-main-data-container">
+    <section class="drink-top-section" fxLayout="row">
+      <div class="drink-main-img">
+        <img
+          loading="lazy"
+          src="{{ drink?.strDrinkThumb }}"
+          [alt]="drink?.strDrink ? drink?.strDrink : drink?.strDrink"
+          appImgMissingDirective
+        />
+      </div>
+
+      <div class="drink-main-info">
+        <div class="title-subtitle-container" fxFlex="100">
+          <h2 class="drink-main-title">{{ drink?.strDrink }}</h2>
+        </div>
+
+        <section>
+          <div fxShow>
+            <button mat-raised-button color="primary" aria-label="category">
+              {{ drink?.strAlcoholic }}-{{ drink?.strCategory }}
+            </button>
+          </div>
+
+          <div fxShow class="ingredients-container">
+            <h3>Ingredients</h3>
+            <ul *ngFor="let recipeProp of drink | keyvalue">
+              <li
+                *ngIf="
+                  recipeProp.key.includes('strIngredient') && recipeProp.value
+                "
+              >
+                {{ recipeProp.value }}
+              </li>
+            </ul>
+          </div>
+
+          <div fxShow class="measures-container">
+            <h3>Measurements</h3>
+            <ul *ngFor="let recipeProp of drink | keyvalue">
+              <li
+                *ngIf="
+                  recipeProp.key.includes('strMeasure') && recipeProp.value
+                "
+              >
+                {{ recipeProp.value }}
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="top-billed-cast" fxLayout="column" fxShow>
+      <h3 class="title-billed">Instructions</h3>
+      {{ drink?.strInstructions }}
+    </section>
+  </div>
+</div>

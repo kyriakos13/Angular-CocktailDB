@@ -1,0 +1,13 @@
+<mat-form-field
+  appearance="legacy"
+  floatLabel="never"
+  style="
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    margin-bottom: 14px;
+  "
+>
+  <input [(ngModel)]="searchText" (keyup)="search()" matInput />
+  <mat-icon matSuffix>search</mat-icon>
+</mat-form-field>

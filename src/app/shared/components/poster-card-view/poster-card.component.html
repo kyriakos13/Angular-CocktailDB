@@ -1,0 +1,15 @@
+<a [routerLink]="'/drinks/detail/' + drink?.idDrink">
+  <mat-card class="drink-card">
+    <img
+      loading="lazy"
+      src="{{ drink?.strDrinkThumb }}"
+      [alt]="drink.strDrink ? drink.strDrink : drink.strDrink"
+      appImgMissingDirective
+    />
+    <mat-card-content class="poster-card-text-container">
+      <mat-card-title *ngIf="drink.strDrink" [title]="drink.strDrink">{{
+        drink.strDrink
+      }}</mat-card-title>
+    </mat-card-content>
+  </mat-card>
+</a>
