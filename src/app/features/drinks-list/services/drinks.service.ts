@@ -2,7 +2,7 @@ import { Category } from './../models/category.model';
 import { Injectable } from "@angular/core";
 import { map, Observable } from "rxjs";
 import { HttpClient } from "@angular/common/http";
-import { Drink, DrinksResult } from '../models/drink.model';
+import { Drink, DrinkDetail, DrinksResult } from '../models/drink.model';
 
 @Injectable()
 export class DrinksService {
@@ -18,7 +18,7 @@ export class DrinksService {
       .pipe(map((res: DrinksResult) => res.drinks));
   }
 
-  getDrinkByID(id: number): Observable<Drink[]> {
+  getDrinkByID(id: number): Observable<DrinkDetail> {
     return this.http
       .get(this.apiDrinks + "lookup.php?i=" + id)
       .pipe(map((res: any) => res.drinks[0]));

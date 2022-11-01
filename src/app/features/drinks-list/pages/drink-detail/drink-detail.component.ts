@@ -37,7 +37,7 @@ export class DrinkDetailComponent implements OnInit, OnDestroy {
     this.subscription?.unsubscribe();
 
     this.subscription = this.service.getDrinkByID(id).subscribe({
-      next: (drink: any) => {
+      next: (drink: DrinkDetail) => {
         this.isLoading = false;
         this.drink = drink;
       },
