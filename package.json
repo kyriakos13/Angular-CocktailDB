@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "github": "ng build --output-path docs --base-href /Angular-Cocktails/"
+    "github": "ng build --output-path docs --base-href /Angular-Cocktails/",
+    "aws-deploy": "aws s3 sync docs s3://bucket-aws-kyr"
   },
   "private": true,
   "dependencies": {

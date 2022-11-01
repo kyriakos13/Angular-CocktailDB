@@ -7,7 +7,7 @@ Angular-CocktailsDB is a simple web app that consumes The Cocktails DB API, it c
 See **Installing** for steps to make it work in your local environment.
 ## 💻 Live Demo
 
-✔ Github Pages: WIP...
+✔ Pages: https://cocktailsdb.tk/
 
 ## 📋 Prerequisites
 
